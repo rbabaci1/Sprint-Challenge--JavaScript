@@ -38,7 +38,16 @@ console.log(consume("Mary", "Poppins", greeting));
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
+/*  
+- First, We difined the 'myFunction()' function in the global scope and the we created the variable 'internal' inside its scope
+- We then, difined the function 'nestedFunction()' inside its scope as well.
+- Inside the function 'nestedFunction()' we're accessing the variable 'internal' which is outside of its scope.
 
+- The reason why 'nestedFunction()' can access the variabel 'internal' is because,
+we inclosed it into the function and made it private to that function.
+So when the variable 'internal' gets destroyed in the outter scope, The function 'nestedFunction()'
+still have access to it, Since it inclosed it. That's why it's called a Closure.
+*/
 
 const external = "I'm outside the function";
 
