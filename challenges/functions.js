@@ -15,23 +15,24 @@ function consume(a, b, cb) {
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
 function add(num1, num2) {
   return num1 + num2;
 }
+
 function multiply(num1, num2) {
   return num1 * num2;
 }
+
 function greeting(firstName, lastName) {
   return `Hello ${firstName} ${lastName}, nice to meet you!`;
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
-console.log(consume(2, 2, add));
-console.log(consume(10, 16, multiply));
-console.log(consume("Mary", "Poppins", greeting));
+
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 // ==== Closures ==== 
 
@@ -39,14 +40,15 @@ console.log(consume("Mary", "Poppins", greeting));
 
 // Explanation: 
 /*  
-- First, We difined the 'myFunction()' function in the global scope and the we created the variable 'internal' inside its scope
-- We then, difined the function 'nestedFunction()' inside its scope as well.
-- Inside the function 'nestedFunction()' we're accessing the variable 'internal' which is outside of its scope.
+  - First, We difined the 'myFunction()' function in the global scope and the we created the variable 'internal' inside its scope
+  - We then, difined the function 'nestedFunction()' inside its scope as well.
+  - Inside the function 'nestedFunction()' we're accessing the variable 'internal' which is outside of its scope.
 
-- The reason why 'nestedFunction()' can access the variabel 'internal' is because,
-we inclosed it into the function and made it private to that function.
-So when the variable 'internal' gets destroyed in the outter scope, The function 'nestedFunction()'
-still have access to it, Since it inclosed it. That's why it's called a Closure.
+  - The reason why 'nestedFunction()' can access the variabel 'internal' is because,
+  we inclosed it into the function and made it private to that function.
+  So when the variable 'internal' gets destroyed in the outter scope. When the function 'nestedFunction()'
+  will be called later on, still can reference that variable, since it inclosed it.
+  That's why it's called a Closure.
 */
 
 const external = "I'm outside the function";
